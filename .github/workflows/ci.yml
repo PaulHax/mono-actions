@@ -4,18 +4,18 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
-    branches: [main]
+    branches: [master]
 
 jobs:
   viewer:
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     working-directory: ./viewer
+    defaults:
+      run:
+        working-directory: ./viewer
 
     steps:
       - uses: actions/checkout@v2
